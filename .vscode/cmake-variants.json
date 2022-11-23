@@ -1,0 +1,42 @@
+{
+    "buildType": {
+        "default": "debug-host",
+        "choices": {
+            "trace-rp2040": {
+                "short": "Trace - RP2040",
+                "long": "Debug build with logging of API function calls",
+                "buildType": "Debug",
+                "settings": {
+                    "REND_API_TRACE": "1"
+                }
+            },
+            "trace-host": {
+                "short": "Trace - Host",
+                "long": "Debug build with logging of API function calls",
+                "buildType": "Debug",
+                "settings": {
+                    "PICO_PLATFORM": "host",
+                    "REND_API_TRACE": "1"
+                }
+            },
+            "debug-rp2040": {
+                "short": "Debug - RP2040",
+                "long": "Include debug information",
+                "buildType": "Debug"
+            },
+            "debug-host": {
+                "short": "Debug - Host",
+                "long": "Include debug information",
+                "buildType": "Debug",
+                "settings": {
+                    "PICO_PLATFORM": "host"
+                }
+            },
+            "release": {
+                "short": "Release",
+                "long": "Optimize for speed- exclude debug information",
+                "buildType": "Release"
+            }
+        }
+    }
+}
